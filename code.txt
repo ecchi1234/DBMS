@@ -1,0 +1,17 @@
+# app serv -> cai mysql
+# mysql -uroot -p -> ket noi voi myssql
+#config cong trong xampp
+mysql -uroot -p -P3307
+#phai cai bien moi truong cho mysql de co the dung duoc (dan file bin)
+#CREATE USER demo@localhost iDENTIFIED BY '123456';
+#SELECT current_user();
+# cap quyen doc co so du lieu
+grant all on *.* to demo@localhost;
+flush privileges; // refresh lai bang phan quyen
+# lay lai quyen
+revoke all on *.* from demo@localhost
+#cap quyen cho co so du lieu nhat dinh
+grant all on sakila.film to demo@localhost;
+# cap quyen nhat dinh
+grant select, update, delete on.....
+all - select, upadte, delete, insert, drop, create
